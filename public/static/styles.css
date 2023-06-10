@@ -18,11 +18,26 @@ body {
     font-family: "Titillium Web", "Roboto", "Inter", Helvetica, Arial, sans-serif;
     font-weight: normal;
     color: #fcfcfc;
-    background: rgb(14,0,18);
+    background: rgb(0,15,116);
+    background: -moz-linear-gradient(0deg, rgba(0,15,116,1) 6%, rgba(0,124,128,1) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(0,15,116,1) 6%, rgba(0,124,128,1) 100%);
+    background: linear-gradient(0deg, rgba(0,15,116,1) 6%, rgba(0,124,128,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000f74",endColorstr="#007c80",GradientType=1); 
+    /* background: rgb(0,11,88);
+    background: -moz-linear-gradient(0deg, rgba(0,11,88,1) 6%, rgba(0,124,128,1) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(0,11,88,1) 6%, rgba(0,124,128,1) 100%);
+    background: linear-gradient(0deg, rgba(0,11,88,1) 6%, rgba(0,124,128,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000b58",endColorstr="#007c80",GradientType=1);  */
+    /* background: rgb(0,21,164);
+    background: -moz-linear-gradient(0deg, rgba(0,21,164,1) 6%, rgba(0,124,128,1) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(0,21,164,1) 6%, rgba(0,124,128,1) 100%);
+    background: linear-gradient(0deg, rgba(0,21,164,1) 6%, rgba(0,124,128,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0015a4",endColorstr="#007c80",GradientType=1);  */
+    /* background: rgb(14,0,18);
     background: -moz-linear-gradient(0deg, rgba(14,0,18,1) 0%, rgba(96,0,124,1) 100%);
     background: -webkit-linear-gradient(0deg, rgba(14,0,18,1) 0%, rgba(96,0,124,1) 100%);
     background: linear-gradient(0deg, rgba(14,0,18,1) 0%, rgba(96,0,124,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0e0012",endColorstr="#60007c",GradientType=1); 
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0e0012",endColorstr="#60007c",GradientType=1);  */
     /* background: rgb(17,17,17);
     background: -moz-linear-gradient(0deg, rgba(17,17,17,1) 18%, rgba(0,15,89,1) 100%);
     background: -webkit-linear-gradient(0deg, rgba(17,17,17,1) 18%, rgba(0,15,89,1) 100%);

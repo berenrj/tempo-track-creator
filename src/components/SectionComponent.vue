@@ -21,7 +21,7 @@
                     <option value="32">32</option>
                 </select>
                 <label for="numBars"> No. Bars: </label>
-                <input type="number" id="numBars" name="numBars" v-model="numBars" min="1" max="128" size="4" title="Please enter a number between 1 and 128." v-on:input="sectionUpdated" required>
+                <input type="number" id="numBars" name="numBars" v-model="numBars" min="1" max="128" size="3" title="Please enter a number between 1 and 128." v-on:input="sectionUpdated" required>
             </li>
             <li>
                 <label for="gradualToNext">Gradually transition tempo to next section? </label>
