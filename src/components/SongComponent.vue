@@ -85,11 +85,12 @@ export default {
       }
     },
     watch: {
-      validSongSubmitted(newValue) {
-        console.log("validSongSubmitted changed to: "+newValue);
-      }
+      /*validSongSubmitted(newValue) {
+        //console.log("validSongSubmitted changed to: "+newValue);
+      }*/
     },
     methods: {
+      /*
       tapTempoClicked() {
         if (!this.tapTempoActive) {
           this.tapTempoActive = true
@@ -124,6 +125,7 @@ export default {
           return bpm
         }
       },
+      */
       addNewSection() {
         // add a new SectionComponent after the last existing section, update the nextSectionId, update the removeBtnState
         this.sections.push({
@@ -183,7 +185,7 @@ export default {
         }
       },
       handleSubmit(event) {
-        console.log("test: "+event.submitter.getAttribute('class'))
+        // console.log("test: "+event.submitter.getAttribute('class'))
         // define single song object
         this.song.songName = (this.songName === null ? '' : this.songName);
         this.song.sections = this.sections;
@@ -200,12 +202,10 @@ export default {
           // set validSongSubmitted true and call downloadPdf
           this.validSongSubmitted = true
           this.downloadPdf(this.song.songName)
-
-
         }
 
         // print song object
-        console.log("SongComponent.vue: handleSubmit, \n"+`validSongSubmitted: ${this.validSongSubmitted}`+`\nsong:\n ${JSON.stringify(this.song)}`);
+        // console.log("SongComponent.vue: handleSubmit, \n"+`validSongSubmitted: ${this.validSongSubmitted}`+`\nsong:\n ${JSON.stringify(this.song)}`);
       },
       resetValidSongSubmitted() {
         this.validSongSubmitted = false
@@ -291,8 +291,12 @@ export default {
         // remove any bad characters from the fileName and use result for actual filename
         let docName = fileName.replace(/[/\\?%*:|"<>]/g, '')
 
+        // Add DD-MM-YYYY to the end of the docName
+        let date = new Date();
+        let formattedDate = " " + date.toLocaleDateString("en-GB").replace(/\//g, '-');
+
         // save (download) the pdf
-        doc.save(docName + '.pdf')
+        doc.save(docName + formattedDate + '.pdf');
 
       }
     }
