@@ -140,7 +140,8 @@ export default {
                 },
                 head: [['Section Name,\nDescription', 'Time\nSignature', 'Tempo', 'Bars', 'Start Bar', 'End Bar', 'Gradual\nTransition\nto Next?']],
                 body: sectionRows,
-                pageBreak: 'avoid'
+                pageBreak: 'auto', // auto / avoid / always
+                rowPageBreak: 'avoid', // auto / avoid
             })
 
             // output the doc as datauristring
@@ -148,7 +149,6 @@ export default {
 
             // set the srcUrl used for the embed to this
             this.srcUrl = string
-
 
             // below .save method can be used for the export/download option (pass in an argument for the button clicked, i.e. preview or export?)
 
