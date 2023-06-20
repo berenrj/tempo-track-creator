@@ -56,6 +56,10 @@ body {
     padding: 4px;
 }
 
+.header a {
+    cursor: default;
+}
+
 .nav li {
     display: inline-block;
 }
