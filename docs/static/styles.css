@@ -177,7 +177,6 @@ a {
 
 #description {
     width: 70%;
-    height: 2.5em;
     vertical-align: text-top;
 }
 
@@ -293,12 +292,12 @@ input:valid {
 /* PDF Preview */
 .embedPdf {
     display: flex;
-    width: 88%;
+    width: 81%;
     height: 518px;
     margin: 0 auto;
     padding: 0;
-}
 
+}
 /* PDF Preview Container */
 .backdrop {
     top: 58px;

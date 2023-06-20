@@ -231,9 +231,9 @@ export default {
 
         doc.setTextColor('#000000')
         doc.setFont('helvetica')
-        doc.setFontSize(22)
+        doc.setFontSize(18)
 
-        doc.text(headerText, pageWidth / 2, 15, {
+        doc.text(headerText, pageWidth / 2, 10, {
             align: 'center',
         })
 
@@ -257,8 +257,6 @@ export default {
 
         // create the table
         autoTable(doc, {
-            // theme: 'plain',
-            margin: {top: 23, right: 8, left: 8},
             headStyles: {
                 font: 'helvetica',
                 fontStyle: 'normal',
@@ -279,7 +277,7 @@ export default {
                 cellWidth: 'auto',
                 halign: 'left',
                 valign: 'middle',
-                cellPadding: 0.8,
+                cellPadding: 0.5,
                 textColor: '#000000',
                 fillColor: '#ffffff',
                 lineColor: '#4b4b4b',
@@ -287,8 +285,7 @@ export default {
             },
             head: [['Section Name,\nDescription', 'Time\nSignature', 'Tempo', 'Bars', 'Start Bar', 'End Bar', 'Gradual\nTransition\nto Next?']],
             body: sectionRows,
-            pageBreak: 'auto', // auto / avoid / always
-            rowPageBreak: 'avoid', // auto / avoid
+            pageBreak: 'avoid'
         })
 
         // remove any bad characters from the fileName and use result for actual filename

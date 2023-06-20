@@ -6,8 +6,6 @@
 
             <embed class="embedPdf" v-if="srcUrl" :src="srcUrl" type="application/pdf">
 
-            <!-- <iframe class="embedPdf" v-if="srcUrl" :src="srcUrl" frameborder="0"></iframe> -->
-
             <!-- <table id="pdfTable">
                 <h3>{{ song.songName }}</h3>
                 <tr>
@@ -87,9 +85,9 @@ export default {
 
             doc.setTextColor('#000000')
             doc.setFont('helvetica')
-            doc.setFontSize(22)
+            doc.setFontSize(18)
 
-            doc.text(headerText, pageWidth / 2, 15, {
+            doc.text(headerText, pageWidth / 2, 10, {
                 align: 'center',
             })
 
@@ -114,7 +112,6 @@ export default {
             // create the table
             autoTable(doc, {
                 // theme: 'plain',
-                margin: {top: 23, right: 8, left: 8},
                 headStyles: {
                     font: 'helvetica',
                     fontStyle: 'normal',
@@ -135,7 +132,7 @@ export default {
                     cellWidth: 'auto',
                     halign: 'left',
                     valign: 'middle',
-                    cellPadding: 0.8,
+                    cellPadding: 0.5,
                     textColor: '#000000',
                     fillColor: '#ffffff',
                     lineColor: '#4b4b4b',
@@ -147,13 +144,16 @@ export default {
                 rowPageBreak: 'avoid', // auto / avoid
             })
 
-            // output the doc
-            // A string identifying one of the possible output types. Possible values are 'arraybuffer', 'blob', 'bloburi'/'bloburl', 'datauristring'/'dataurlstring', 'datauri'/'dataurl', 'dataurlnewwindow', 'pdfobjectnewwindow', 'pdfjsnewwindow'.
-            let string = doc.output('bloburi');
+            // output the doc as datauristring
+            let string = doc.output('datauristring');
 
             // set the srcUrl used for the embed to this
-            // additional # parameters control pdf display options, some dependent on browser
-            this.srcUrl = string + "#view=FitV&zoom=60&toolbar=0&navpanes=0&scrollbar=0&statusbar=0&messages=0";
+            this.srcUrl = string
+
+            // below .save method can be used for the export/download option (pass in an argument for the button clicked, i.e. preview or export?)
+
+            // let fileName = this.song.songName + '.pdf' // could apply some extra info like date
+            // doc.save(fileName)
         }
     }
 }

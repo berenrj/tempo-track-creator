@@ -1,6 +1,6 @@
 <template>
   <div class="header">
-    <a href="/" onclick="return false;">      
+    <a href="/">      
     <img src="../assets/header-logo-metronome.png" alt="Metronome Logo" width="40" height="40"><h1> Tempo Track Creator</h1>
     </a>     
     <!-- <div class="nav">
