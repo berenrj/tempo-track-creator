@@ -12,10 +12,6 @@
     
   </SongComponent>
 
-  <!-- <div v-if="showPdfPreview">
-    <PdfPreviewComponent></PdfPreviewComponent>
-  </div> -->
-
   <FooterComponent></FooterComponent>
 
 </template>
@@ -23,7 +19,6 @@
 <script>
 import HeaderComponent from './components/HeaderComponent.vue'
 import SongComponent from './components/SongComponent.vue'
-// import PdfPreviewComponent from './components/PdfPreviewComponent.vue'
 import SectionComponent from './components/SectionComponent.vue'
 import FooterComponent from './components/FooterComponent.vue'
 
@@ -32,27 +27,8 @@ export default {
   components: {
     HeaderComponent,
     SongComponent,
-    // PdfPreviewComponent,
     SectionComponent,
     FooterComponent
-  },
-  // data() {
-  //   return{
-  //     showPdfPreview: false
-  //   }
-  // }
+  }
 }
 </script>
-
-<!--
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
--->
